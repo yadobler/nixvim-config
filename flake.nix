@@ -29,15 +29,6 @@
                 };
             };
             nvim = nixvim'.makeNixvimWithModule nixvimModule;
-            installer = pkgs.mkShell {
-                shellHook = ''
-                    nix build -o nvim_result
-                    nix profile remove nixvim 
-                    nix profile install ./nvim_result
-                    rm ./nvim_result
-                    return
-                    '';
-            };
         in
         {
             checks = {
@@ -48,9 +39,6 @@
                 # Lets you run `nix run .` to install nixvim
                 default = nvim;
             };
-            devShells.default = installer;
-
-            
         };
     };
     
