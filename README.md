@@ -6,6 +6,8 @@
      inputs.nixvim.url = "./modules/nixvim-config";
      ```
   2. Add the flake into your `configuration.nix` (ensure `system` and `inputs` are passed in via `extraSpecialArgs` in flake file):
-    ```nix
-    environment.systemPackages = [ inputs.nixvim.packages.${system}.default ];
-    ```
+     ```nix
+     environment.systemPackages = [ inputs.nixvim.packages.${system}.default ];
+     ```
+
+I suggest testing locally with just `nix build` and `result/bin/nvim`, and once happy, rebuild your nixos.
