@@ -1,16 +1,8 @@
 {
   imports = [
-    #./completion
-    #./debug
-    ./editor
-    #./git
-    #./lang
-    #./lsp
-    #./luasnip
-    #./template
-    ./theme
-    #./treesitter
-    #./ui
-    #./util
+    ./lang
+    ./git.nix
+    ./theme.nix
+    ./whichkey.nix
   ];
 }
