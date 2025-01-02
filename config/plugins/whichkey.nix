@@ -2,17 +2,12 @@
   plugins.which-key = {
     enable = true;
     settings = {
-
       icons = {
         breadcrumb = "»";
         group = "+";
         separator = "➜"; # 
       };
-
-      win = {
-        border = "double";
-      };
-
+      
       spec = [
         { group = "+code";          __unkeyed-1 = "<leader>c"; mode = [ "n" "v" ]; }
         { group = "+debug";         __unkeyed-1 = "<leader>d"; mode = [ "n" "v" ]; }
