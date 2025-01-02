@@ -2,7 +2,8 @@
   keymaps = [
     { mode = "n"; key = "<leader>gcm"; action = "<cmd>Git commit<CR>"; }
     { mode = "n"; key = "<leader>gs"; action =  "<cmd>Git status<CR>"; }
-    { mode = "n"; key = "<leader>ga"; action =  "<cmd>Git add %<CR>"; }
+    { mode = "n"; key = "<leader>gaf"; action =  "<cmd>Git add -f %<CR>"; }
+    { mode = "n"; key = "<leader>gau"; action = "<cmd>Git add -u<CR>"; }
     { mode = "n"; key = "<leader>gl"; action =  "<cmd>Git log<CR>"; }
     { mode = "n"; key = "<leader>gp"; action =  "<cmd>Git push<CR>"; }
     { mode = "n"; key = "<leader>g:"; action =  "<cmd>Git"; }
