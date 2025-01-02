@@ -8,6 +8,8 @@
     { mode = "n"; key = "<leader>gl"; action =  "<cmd>Git log<CR>"; }
     { mode = "n"; key = "<leader>gp"; action =  "<cmd>Git push<CR>"; }
     { mode = "n"; key = "<leader>gs"; action =  "<cmd>Git status<CR>"; }
+    
+    { mode = "n"; key = "<leader>f"; action =  "<cmd>lua MiniFiles.open()<CR>"; }
 
     { mode = "n"; key = "<leader><leader>f"; action =  "<cmd>Pick files<CR>"; }
     { mode = "n"; key = "<leader><leader>b"; action =  "<cmd>Pick buff<CR>"; }

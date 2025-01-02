@@ -1,18 +1,18 @@
 {
   imports = [
-        ./cpp.nix
         #./java.nix
-        ./typescript.nix
-        ./nix.nix
-        ./markdown.nix
-        ./python.nix
-        ./html.nix
+        ./astro.nix
+        ./cpp.nix
         ./css.nix
+        ./docker.nix
+        ./html.nix
         ./json.nix
         ./lua.nix
-        ./docker.nix
+        ./markdown.nix
+        ./nix.nix
+        ./python.nix
         ./shell.nix
+        ./typescript.nix
         ./yaml.nix
-        ./astro.nix
   ];
 }

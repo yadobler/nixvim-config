@@ -26,6 +26,7 @@
                 module = import ./config; 
                 extraSpecialArgs = {
                     # inherit (inputs) foo;
+                    #inherit (inputs) pkgs;
                 };
             };
             nvim = nixvim'.makeNixvimWithModule nixvimModule;
