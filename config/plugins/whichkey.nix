@@ -10,8 +10,7 @@
       };
 
       win = {
-        border = "round";
-        padding = [ 1 5 ];
+        border = "double";
       };
 
       spec = [

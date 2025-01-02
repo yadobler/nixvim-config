@@ -64,7 +64,7 @@
     opts = {
       # Display
       termguicolors = true;
-      guifont = "FiraCode NFP:h13";
+      guifont = "JetBrainsMono Nerd Font:h13";
       encoding = "utf-8";
       showmode = false;
       laststatus = 2;
@@ -98,13 +98,13 @@
       shiftwidth = 4;
       tabstop = 4;
       softtabstop = 4;
-      smartindent = true;
       wrap = false;
-      foldenable = true;
-      foldlevel = 99;
-      foldlevelstart = 99;
-      foldmethod = "manual";
-      copyindent = true;
+      #smartindent = true;
+      #foldenable = true;
+      #foldlevel = 99;
+      #foldlevelstart = 99;
+      #foldmethod = "manual";
+      #copyindent = true;
 
       # Search
       ignorecase = true;
@@ -117,17 +117,5 @@
 
       # Preview substitutions live, as you type!
       inccommand = "split";
-
-      # Fillchars
-      fillchars = {
-        vert = "│";
-        fold = "⠀";
-        eob = " "; # suppress ~ at EndOfBuffer
-        diff = "░";
-        msgsep = "‾";
-        foldopen = "▾";
-        foldsep = "│";
-        foldclose = "▸";
-      };
     };
 }

@@ -1,8 +1,8 @@
 {
   imports = [
     ./lang
-    ./git.nix
     ./theme.nix
+    ./mini.nix
     ./whichkey.nix
   ];
 }
