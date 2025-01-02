@@ -1,10 +1,15 @@
 {
   keymaps = [
-    { mode = "n"; key = "<leader>gcm"; action = "<cmd>git commit<CR>"; }
-    { mode = "n"; key = "<leader>gs"; action = "<cmd>git status<CR>"; }
-    { mode = "n"; key = "<leader>gl"; action = "<cmd>git log<CR>"; }
-    { mode = "n"; key = "<leader>gp"; action = "<cmd>git push<CR>"; }
-    { mode = "n"; key = "<leader>g:"; action = "<cmd>git"; }
+    { mode = "n"; key = "<leader>gcm"; action = "<cmd>Git commit<CR>"; }
+    { mode = "n"; key = "<leader>gs"; action =  "<cmd>Git status<CR>"; }
+    { mode = "n"; key = "<leader>ga"; action =  "<cmd>Git add %<CR>"; }
+    { mode = "n"; key = "<leader>gl"; action =  "<cmd>Git log<CR>"; }
+    { mode = "n"; key = "<leader>gp"; action =  "<cmd>Git push<CR>"; }
+    { mode = "n"; key = "<leader>g:"; action =  "<cmd>Git"; }
+    
+    { mode = "n"; key = "<leader><leader>f"; action =  "<cmd>Pick files<CR>"; }
+    { mode = "n"; key = "<leader><leader>b"; action =  "<cmd>Pick buff<CR>"; }
+    { mode = "n"; key = "<leader><leader>e"; action =  "<cmd>Pick explorer<CR>"; }
   ];
 
   plugins.mini = {
@@ -12,6 +17,7 @@
     mockDevIcons = true;
     modules = {
       tabline = {};
+      statusline = {};
       extra = {};
       files = {};
       pick = {};
@@ -22,7 +28,9 @@
       indentscope = {};
       notify = {};
       pairs = {};
-      snippets = {};
+      splitjoin = {};
+      # snippets = {};
+      # animate = {};
       icons.style = "glyph";
 
       hipatterns = {
