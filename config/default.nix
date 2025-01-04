@@ -2,7 +2,7 @@
     imports = [
       ./plugins
       ./autocmd.nix
-      ./keymap.nix
+      
     ];
     extraConfigLua = ''
       -- locale
