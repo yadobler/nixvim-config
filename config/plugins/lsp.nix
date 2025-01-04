@@ -11,6 +11,8 @@
 
   };
 
+
+
   plugins.treesitter = {
       enable = true;
       settings = {
@@ -37,7 +39,7 @@
 
       ];
   };
-  
+
   plugins.treesitter-context.enable = false;
   plugins.treesitter-refactor.enable = true;
   plugins.treesitter-textobjects.enable = true;

@@ -1,19 +1,5 @@
 {
   keymaps = [
-    { mode = "n"; key = "<leader>g:"; action =  "<cmd>Git"; }
-    { mode = "n"; key = "<leader>gaf"; action =  "<cmd>Git add -f %<CR>"; }
-    { mode = "n"; key = "<leader>gau"; action = "<cmd>Git add -u<CR>"; }
-    { mode = "n"; key = "<leader>gcM"; action = "<cmd>Git commit<CR>"; }
-    { mode = "n"; key = "<leader>gcm"; action = "<cmd>Git commit -m "; }
-    { mode = "n"; key = "<leader>gl"; action =  "<cmd>Git log<CR>"; }
-    { mode = "n"; key = "<leader>gp"; action =  "<cmd>Git push<CR>"; }
-    { mode = "n"; key = "<leader>gs"; action =  "<cmd>Git status<CR>"; }
-    
-    { mode = "n"; key = "<leader>f"; action =  "<cmd>lua MiniFiles.open()<CR>"; }
-
-    { mode = "n"; key = "<leader><leader>f"; action =  "<cmd>Pick files<CR>"; }
-    { mode = "n"; key = "<leader><leader>b"; action =  "<cmd>Pick buff<CR>"; }
-    { mode = "n"; key = "<leader><leader>e"; action =  "<cmd>Pick explorer<CR>"; }
   ];
 
   plugins.mini = {
@@ -25,7 +11,6 @@
       extra = {};
       files = {};
       pick = {};
-      completion = {};
       cursorword = {};
       fuzzy = {};
       git = {};
@@ -33,6 +18,7 @@
       notify = {};
       pairs = {};
       splitjoin = {};
+      #completion = {};
       # snippets = {};
       # animate = {};
       icons.style = "glyph";
