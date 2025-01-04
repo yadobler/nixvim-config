@@ -9,7 +9,6 @@
       tabline = {};
       statusline = {};
       extra = {};
-      files = {};
       pick = {};
       cursorword = {};
       fuzzy = {};
@@ -23,6 +22,11 @@
       # animate = {};
       icons.style = "glyph";
 
+      files = {
+        mappings = { 
+          close = "<Esc>"; 
+        };
+      };
       hipatterns = {
         highlighters = {
           # Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'

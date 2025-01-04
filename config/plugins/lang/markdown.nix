@@ -49,6 +49,7 @@ in
         extraOptions = {
           checkFrequency = "save";
           language = "en-GB";
+          loglevel = "warning";
         };
       };
     };
@@ -62,7 +63,7 @@ in
   keymaps = [
     {
       mode = "n";
-      key = "<leader>m";
+      key = "<leader>ccmp";
       action = "<cmd>MarkdownPreviewToggle<cr>";
       options = {
         silent = true;
