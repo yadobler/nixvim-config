@@ -22,7 +22,7 @@
           "<C-Space>" = "cmp.mapping.complete()";
           "<C-d>" = "cmp.mapping.scroll_docs(-4)";
           "<C-u>" = "cmp.mapping.scroll_docs(4)";
-          "<Esc>" = "cmp.mapping.close()";
+          "<C-g>" = "cmp.mapping.close()";
           "<CR>" = "cmp.mapping.confirm({ select = true })";
           "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
           "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
