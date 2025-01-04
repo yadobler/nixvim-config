@@ -10,6 +10,7 @@
     cmp-nvim-lsp-document-symbol.enable = true;
 
     cmp = {
+      enable = true;
       autoEnableSources = true;
       settings = { 
         sources = [
