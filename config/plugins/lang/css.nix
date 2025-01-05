@@ -24,6 +24,15 @@
 
       tailwindcss = {
         enable = true;
+        filetypes = [
+          "html"
+          "js"
+          "ts"
+          "jsx"
+          "tsx"
+          "mdx"
+          "svelte"
+        ];
         cmd = [
           (lib.getExe pkgs.tailwindcss-language-server)
           "--stdio"

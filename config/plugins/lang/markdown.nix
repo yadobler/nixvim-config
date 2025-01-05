@@ -2,19 +2,23 @@
 let
   helpers = lib.nixvim;
 in
-{
-    extraPackages = with pkgs; [
-        marksman
-        (vimUtils.buildVimPlugin {
-            name = "mdx.nvim";
-            src = pkgs.fetchFromGitHub {
-                owner = "davidmh";
-                repo = "mdx.nvim";
-                rev = "ae83959";
-                hash = "sha256-z835i8QkQFe185sgSLtUaaTsMs2Px9x6KTObTRAOFz0=";
-            };
-        })
-    ];
+  {
+  extraPackages = with pkgs; [
+    marksman
+    (vimUtils.buildVimPlugin {
+      name = "mdx.nvim";
+      src = pkgs.fetchFromGitHub {
+        owner = "davidmh";
+        repo = "mdx.nvim";
+        rev = "ae83959";
+        hash = "sha256-z835i8QkQFe185sgSLtUaaTsMs2Px9x6KTObTRAOFz0=";
+      };
+    })
+  ];
+
+  extraConfigLua = ''
+    require("mdx").setup {}
+    '';
 
   plugins = {
     clipboard-image = {
@@ -34,14 +38,29 @@ in
       enable = true;
     };
 
+    conform-nvim.settings = {
+      formatters_by_ft.mdx = [
+        "prettierd"
+        "prettier"
+      ];
+      formatters = {
+        prettierd.command = "${pkgs.prettierd}/bin/prettierd";
+        prettier.command = "${pkgs.nodePackages.prettier}/bin/prettier";
+      };
+    };
+
     lsp.servers = {
       marksman.enable = true;
+      mdx_analyzer = {
+        enable = false;
+      };
 
       ltex = {
         enable = true;
         filetypes = [
           "markdown"
           "text"
+          "mdx"
         ];
 
         settings.completionEnabled = true;
@@ -50,6 +69,8 @@ in
           checkFrequency = "save";
           language = "en-GB";
           loglevel = "warning";
+          diagnosticSeverity = "warning";
+          trace.server = "off";
         };
       };
     };
