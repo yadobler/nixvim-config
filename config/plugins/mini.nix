@@ -16,9 +16,6 @@
       indentscope = {};
       pairs = {};
       splitjoin = {};
-      #completion = {};
-      # snippets = {};
-      # animate = {};
       icons.style = "glyph";
       notify.lsp_progress.enable = false;
       files = {

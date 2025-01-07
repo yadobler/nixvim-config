@@ -20,8 +20,8 @@
         ];
         mapping = {
           "<C-Space>" = "cmp.mapping.complete()";
-          "<C-d>" = "cmp.mapping.scroll_docs(-4)";
-          "<C-u>" = "cmp.mapping.scroll_docs(4)";
+          "<C-n>" = "cmp.mapping.scroll_docs(-4)";
+          "<C-p>" = "cmp.mapping.scroll_docs(4)";
           "<C-g>" = "cmp.mapping.close()";
           "<CR>" = "cmp.mapping.confirm({ select = true })";
           "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
@@ -43,23 +43,38 @@
         indent.enable = true;
       };
       grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+        c 
+        diff
+        gleam
+        glsl
+        hyprlang
         cpp
-        bash
         lua 
         make
-        markdown
+        powershell
+        bash
         nix
+
         regex
+        gitignore
+        gitcommit
+        gitattributes
+        git_config
+        git_rebase
+
+        wgsl
         css
+        scss
         typescript
         javascript
         html
         astro
+
+        markdown
         json
         toml
         xml
         yaml
-
       ];
     };
 
