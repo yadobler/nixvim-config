@@ -39,7 +39,7 @@
     # buffer
     { mode = "n"; key = "<leader>j"; action = "<cmd>bn<CR>"; options.desc = "Previous buffer";}
     { mode = "n"; key = "<leader>k"; action = "<cmd>bp<CR>"; options.desc = "Next buffer";}
-    { mode = "n"; key = "<leader>bd"; action = "<cmd>bd<CR>"; options.desc = "Delete buffer";}
+    { mode = "n"; key = "<leader>q"; action = "<cmd>bd<CR>"; options.desc = "Delete buffer";}
     
     # git
     { mode = "n"; key = "<leader>g:"; action =  "<cmd>Git"; }

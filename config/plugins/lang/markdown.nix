@@ -57,7 +57,7 @@ in
       };
 
       ltex = {
-        enable = true;
+        enable = false;
         filetypes = [
           "markdown"
           "text"
@@ -70,7 +70,7 @@ in
           checkFrequency = "save";
           language = "en-GB";
           loglevel = "warning";
-          diagnosticSeverity = "warning";
+          diagnosticSeverity = "information";
           trace.server = "off";
         };
       };
