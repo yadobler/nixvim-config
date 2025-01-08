@@ -71,7 +71,6 @@
         typescript
         javascript
         html
-        astro
 
         markdown
         json
