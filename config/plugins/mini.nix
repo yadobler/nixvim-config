@@ -35,7 +35,6 @@
           '';
         };
       };
-
       align = {
         mappings = {
           start = "ga";
@@ -43,7 +42,6 @@
         };
         silent = false;
       };
-
       comment = {
         mappings = {
           comment = "<leader>/";

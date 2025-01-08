@@ -32,10 +32,13 @@
       };
     };
 
+    lspsaga = {
+      enable = true;
+    };
 
     treesitter-context.enable = false;
-    treesitter-refactor.enable = true;
-    treesitter-textobjects.enable = true;
+    treesitter-refactor.enable = false;
+    treesitter-textobjects.enable = false;
     treesitter = {
       enable = true;
       settings = {

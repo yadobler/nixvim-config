@@ -13,10 +13,14 @@
 
       spec = [
         { group = "+code";          __unkeyed-1 = "<leader>c"; mode = [ "n" "v" ]; }
+        { group = "+code-specific"; __unkeyed-1 = "<leader>cc"; mode = [ "n" "v" ]; }
+        { group = "+markdown"; __unkeyed-1 = "<leader>ccm"; mode = [ "n" "v" ]; }
+        
         { group = "+debug";         __unkeyed-1 = "<leader>d"; mode = [ "n" "v" ]; }
         { group = "+git";           __unkeyed-1 = "<leader>g"; mode = [ "n" "v" ]; }
-        { group = "+find/file";     __unkeyed-1 = "<leader>f"; mode = "n"; }
         { group = "+search";        __unkeyed-1 = "<leader><leader>"; mode = "n"; }
+        { group = "+utilities";     __unkeyed-1 = "<leader>u"; mode = "n"; }
+        { group = "+colour";        __unkeyed-1 = "<leader>uc"; mode = "n"; }
       ];
     };
   };
@@ -28,6 +32,10 @@
 
     # Set highlight on search, but clear on pressing <Esc> in normal mode
     { mode = "n"; key = "<Esc>"; action = "<cmd>nohlsearch<CR>"; }
+    { mode = ["n" "v"]; key = "i"; action = "<cmd>nohlsearch<CR>i"; }
+    { mode = ["n" "v"]; key = "a"; action = "<cmd>nohlsearch<CR>a"; }
+    { mode = ["n" "v"]; key = "I"; action = "<cmd>nohlsearch<CR>I"; }
+    { mode = ["n" "v"]; key = "A"; action = "<cmd>nohlsearch<CR>A"; }
 
     # Allow search terms to stay in the middle
     { mode = "n"; key = "N"; action = "Nzzzv"; }
@@ -55,8 +63,24 @@
     { mode = "n"; key = "<leader>f"; action =  "<cmd>lua MiniFiles.open()<CR>"; }
 
     # fuzzy
-    { mode = "n"; key = "<leader><leader>f"; action =  "<cmd>Pick files<CR>"; }
-    { mode = "n"; key = "<leader><leader>b"; action =  "<cmd>Pick buff<CR>"; }
-    { mode = "n"; key = "<leader><leader>e"; action =  "<cmd>Pick explorer<CR>"; }
-  ];
+    { mode = "n"; key = "<leader><leader>f"; action =  "<cmd>Pick Files<CR>"; }
+    { mode = "n"; key = "<leader><leader>b"; action =  "<cmd>Pick Buff<CR>"; }
+    { mode = "n"; key = "<leader><leader>e"; action =  "<cmd>Pick Explorer<CR>"; }
+
+    # fold
+    { mode = "n"; key = "<leader>zf"; action =  "V%zf"; options.desc = "Fold Code"; }
+
+    # utilities
+    { mode = "n"; key = "<leader>ucp"; action =  "<cmd>CccPick<CR>"; options.desc = "Color Picker"; }
+    { mode = "n"; key = "<leader>ucc"; action =  "<cmd>CccConvert<CR>"; options.desc = "Convert Color"; }
+
+
+    # lsp
+    { mode = "n"; key = "<leader>cd"; action = "<cmd>Lspsaga hover_doc<CR>"; options.desc = "Hover Documentation"; }
+    { mode = "n"; key = "<leader>ca"; action = "<cmd>Lspsaga code_action<CR>"; options.desc = "Code Action"; }
+    { mode = "n"; key = "<leader>cr"; action = "<cmd>Lspsaga rename<CR>"; options.desc = "Rename"; }
+    { mode = "n"; key = "<leader>cj"; action = "<Cmd>Lspsaga diagnostic_jump_next<CR>"; options.desc = "Jump to next diagnostic"; }
+    { mode = "n"; key = "<leader>ck"; action = "<Cmd>Lspsaga diagnostic_jump_prev<CR>"; options.desc = "Jump to previous diagnostic"; }
+    { mode = "n"; key = "<leader>cd"; action = "<Cmd>Lspsaga goto_definition<CR>"; options.desc = "Go to definition"; }
+  ];                                                                                
 }
