@@ -63,9 +63,9 @@
     { mode = "n"; key = "<leader>f"; action =  "<cmd>lua MiniFiles.open()<CR>"; }
 
     # fuzzy
-    { mode = "n"; key = "<leader><leader>f"; action =  "<cmd>Pick Files<CR>"; }
-    { mode = "n"; key = "<leader><leader>b"; action =  "<cmd>Pick Buff<CR>"; }
-    { mode = "n"; key = "<leader><leader>e"; action =  "<cmd>Pick Explorer<CR>"; }
+    { mode = "n"; key = "<leader><leader>f"; action =  "<cmd>Pick files<CR>"; }
+    { mode = "n"; key = "<leader><leader>b"; action =  "<cmd>Pick buff<CR>"; }
+    { mode = "n"; key = "<leader><leader>e"; action =  "<cmd>Pick explorer<CR>"; }
 
     # fold
     { mode = "n"; key = "<leader>zf"; action =  "V%zf"; options.desc = "Fold Code"; }
