@@ -22,7 +22,6 @@
       eslint = {
         enable = true;
         filetypes = [
-          "astro"
           "javascript"
           "javascriptreact"
           "javascript.jsx"
@@ -58,7 +57,6 @@
           "typescriptreact"
           "svelte"
           "mdx"
-          "astro"
         ];
 
         settings = {

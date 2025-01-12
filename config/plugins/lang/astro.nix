@@ -1,8 +1,5 @@
 { pkgs, ... }:
 {
-  extraPlugins = with pkgs.vimPlugins; [
-    vim-astro
-  ];
-
   plugins.treesitter.settings.highlight.disable = [ "astro" ];
+  plugins.lsp.servers.astro.enable = true;
 }
