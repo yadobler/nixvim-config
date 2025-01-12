@@ -76,11 +76,17 @@
 
 
     # lsp
-    { mode = "n"; key = "<leader>cd"; action = "<cmd>Lspsaga hover_doc<CR>"; options.desc = "Hover Documentation"; }
-    { mode = "n"; key = "<leader>ca"; action = "<cmd>Lspsaga code_action<CR>"; options.desc = "Code Action"; }
-    { mode = "n"; key = "<leader>cr"; action = "<cmd>Lspsaga rename<CR>"; options.desc = "Rename"; }
-    { mode = "n"; key = "<leader>cj"; action = "<Cmd>Lspsaga diagnostic_jump_next<CR>"; options.desc = "Jump to next diagnostic"; }
-    { mode = "n"; key = "<leader>ck"; action = "<Cmd>Lspsaga diagnostic_jump_prev<CR>"; options.desc = "Jump to previous diagnostic"; }
-    { mode = "n"; key = "<leader>cd"; action = "<Cmd>Lspsaga goto_definition<CR>"; options.desc = "Go to definition"; }
-  ];                                                                                
+    { mode = "n"; key = "<leader>cD"; action = "<cmd>Lspsaga hover_doc<CR>"; options = { desc = "Hover"; silent = true; }; } 
+    { mode = "n"; key = "<leader>ca"; action = "<cmd>Lspsaga code_action<CR>"; options = { desc = "Code Action"; silent = true; }; } 
+    { mode = "n"; key = "<leader>cd"; action = "<cmd>Lspsaga show_line_diagnostics<CR>"; options = { desc = "Line Diagnostics"; silent = true; }; } 
+    { mode = "n"; key = "<leader>ci"; action = "<cmd>Lspsaga finder imp<CR>"; options = { desc = "Goto Implementation"; silent = true; }; } 
+    { mode = "n"; key = "<leader>cj"; action = "<cmd>Lspsaga diagnostic_jump_next<CR>"; options = { desc = "Next Diagnostic"; silent = true; }; } 
+    { mode = "n"; key = "<leader>ck"; action = "<cmd>Lspsaga diagnostic_jump_prev<CR>"; options = { desc = "Previous Diagnostic"; silent = true; }; } 
+    { mode = "n"; key = "<leader>cr"; action = "<cmd>Lspsaga rename<CR>"; options = { desc = "Rename"; silent = true; }; } 
+    { mode = "n"; key = "<leader>ct"; action = "<cmd>Lspsaga peek_type_definition<CR>"; options = { desc = "Type Definition"; silent = true; }; } 
+    { mode = "n"; key = "<leader>cw"; action = "<cmd>Lspsaga outline<CR>"; options = { desc = "Outline"; silent = true; }; } 
+    { mode = "n"; key = "gD"; action = "<cmd>Lspsaga show_line_diagnostics<CR>"; options = { desc = "Goto Declaration"; silent = true; }; } 
+    { mode = "n"; key = "gd"; action = "<cmd>Lspsaga finder def<CR>"; options = { desc = "Goto Definition"; silent = true; }; } 
+    { mode = "n"; key = "gr"; action = "<cmd>Lspsaga finder ref<CR>"; options = { desc = "Goto References"; silent = true; }; } 
+  ];
 }

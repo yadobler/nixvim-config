@@ -34,8 +34,35 @@
 
     lspsaga = {
       enable = true;
+      codeAction.keys = {
+        exec = "<CR>";
+        quit = [
+          "<Esc>"
+          "q"
+        ];
+      };
+      lightbulb = {
+        enable = false;
+        sign = false;
+        virtualText = true;
+      };
+      rename = {
+        autoSave = false;
+        keys = {
+          exec = "<CR>";
+          quit = [
+            "<C-k>"
+            "<Esc>"
+          ];
+          select = "x";
+        };
+      };
+      scrollPreview = {
+        scrollDown = "<C-p>";
+        scrollUp = "<C-n>";
+      };
     };
-
+    
     treesitter-context.enable = false;
     treesitter-refactor.enable = false;
     treesitter-textobjects.enable = false;
