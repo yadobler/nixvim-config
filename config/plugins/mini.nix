@@ -1,47 +1,24 @@
 {
-  keymaps = [
-  ];
-
   plugins.mini = {
+
     enable = true;
+
     mockDevIcons = true;
+
     modules = {
-      tabline = {};
-      statusline = {};
-      extra = {};
-      pick = {};
-      cursorword = {};
-      fuzzy = {};
-      git = {};
-      indentscope = {};
-      pairs = {};
-      splitjoin = {};
-      icons.style = "glyph";
-      notify.lsp_progress.enable = false;
-      files = {
-        mappings = { 
-          close = "<Esc>"; 
-        };
-      };
-      hipatterns = {
-        highlighters = {
-          # Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
-          fixme = { pattern = "%f[%w]()FIXME()%f[%W]"; group = "MiniHipatternsFixme"; };
-          hack  = { pattern = "%f[%w]()HACK()%f[%W]";  group = "MiniHipatternsHack";  };
-          todo  = { pattern = "%f[%w]()TODO()%f[%W]";  group = "MiniHipatternsTodo";  };
-          note  = { pattern = "%f[%w]()NOTE()%f[%W]";  group = "MiniHipatternsNote";  };
-          hex_color.__raw = ''
-            require('mini.hipatterns').gen_highlighter.hex_color()
-          '';
-        };
-      };
+
+      ai = {};
+
       align = {
         mappings = {
-          start = "ga";
-          start_with_preview = "gA";
+          start_with_preview = "ga";
+          start = "gA";
         };
         silent = false;
       };
+
+      backeted = { };
+
       comment = {
         mappings = {
           comment = "<leader>/";
@@ -51,8 +28,19 @@
         };
       };
 
+      cursorword = {};
+
       diff = {
-        view.style = "sign";
+        
+        view = {
+          style = "sign";
+          signs = {
+            add = "│";
+            change = "│";
+            delete = "-";
+          };
+        };
+
         mappings = {
           # Apply hunks inside a visual/operator region
           apply = "<leader>gh";
@@ -71,6 +59,59 @@
           goto_last =  "<leader>gG";
         };
       };
+
+      extra = {};
+
+      files = {
+        mappings = { 
+          close = "<Esc>"; 
+        };
+      };
+
+      fuzzy = {};
+
+      git = {};
+      
+      hipatterns = {
+        highlighters = {
+          # Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
+          fixme = { pattern = "%f[%w]()FIXME()%f[%W]"; group = "MiniHipatternsFixme"; };
+          hack  = { pattern = "%f[%w]()HACK()%f[%W]";  group = "MiniHipatternsHack";  };
+          todo  = { pattern = "%f[%w]()TODO()%f[%W]";  group = "MiniHipatternsTodo";  };
+          note  = { pattern = "%f[%w]()NOTE()%f[%W]";  group = "MiniHipatternsNote";  };
+          hex_color.__raw = ''
+            require('mini.hipatterns').gen_highlighter.hex_color()
+            '';
+        };
+      };
+
+      icons.style = "glyph";
+
+      indentscope = {};
+      
+      notify.lsp_progress.enable = false;
+
+      pairs = {};
+
+      pick = {};
+
+      splitjoin = {};
+
+      statusline = {};
+
+      surround = {
+        mappings = {
+          add = "gsa";
+          delete = "gsd";
+          find = "gsf";
+          find_left = "gsF";
+          highlight = "gsh";
+          replace = "gsr";
+          update_n_lines = "gsn";
+        };
+      };
+
+      tabline = {};
     };
   };
 }

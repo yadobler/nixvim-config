@@ -3,6 +3,7 @@
   plugins = {
     lsp.enable = true;
     dap.enable = true;
+    conform-nvim.enable = true;
 
     cmp-dap.enable = true;
     cmp-emoji.enable = true;
