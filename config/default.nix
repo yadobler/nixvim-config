@@ -77,7 +77,7 @@
     laststatus = 2;
     background = "dark";
     backspace = "indent,eol,start";
-    linespace = 0
+    linespace = 0;
 
     # Timeouts
     timeoutlen = 500;
