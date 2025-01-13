@@ -17,7 +17,7 @@
         silent = false;
       };
 
-      backeted = { };
+      bracketed = { };
 
       comment = {
         mappings = {

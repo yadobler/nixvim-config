@@ -27,13 +27,13 @@ in
       clipboardPackage = pkgs.wl-clipboard;
     };
 
-    image = {
-      enable = helpers.enableExceptInTests;
-      integrations.markdown = {
-        clearInInsertMode = true;
-        onlyRenderImageAtCursor = true;
-      };
-    };
+      # image = {
+      #   enable = helpers.enableExceptInTests;
+      #   integrations.markdown = {
+      #     clearInInsertMode = true;
+      #     onlyRenderImageAtCursor = true;
+      #   };
+      # };
 
     markdown-preview = {
       enable = true;
