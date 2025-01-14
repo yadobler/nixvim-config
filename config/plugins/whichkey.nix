@@ -65,11 +65,11 @@
     { mode = "n"; key = "<leader>t"; action = "<cmd>Lspsaga term_toggle<CR>"; options = { desc = "Toggle terminal"; silent = true; }; } 
 
     # fuzzy
-    { mode = "n"; key = "<leader><leader>f"; action =  "<cmd>Pick files<CR>";            options = { desc = "Pick files"; silent = true; }
-    { mode = "n"; key = "<leader><leader>b"; action =  "<cmd>Pick buffers<CR>";          options = { desc = "Pick buffers"; silent = true; }
-    { mode = "n"; key = "<leader><leader>e"; action =  "<cmd>Pick explorer<CR>";         options = { desc = "Pick explorer"; silent = true; }
-    { mode = "n"; key = "<leader><leader>m"; action =  "<cmd>Pick marks<CR>";            options = { desc = "Pick marks"; silent = true; }
-    { mode = "n"; key = "<leader><leader><leader>"; action =  "<cmd>Pick grep_live<CR>"; options = { desc = "Pick grep"; silent = true; }
+    { mode = "n"; key = "<leader><leader>f"; action =  "<cmd>Pick files<CR>";            options = { desc = "Pick files"; silent = true; };}
+    { mode = "n"; key = "<leader><leader>b"; action =  "<cmd>Pick buffers<CR>";          options = { desc = "Pick buffers"; silent = true; };}
+    { mode = "n"; key = "<leader><leader>e"; action =  "<cmd>Pick explorer<CR>";         options = { desc = "Pick explorer"; silent = true; };}
+    { mode = "n"; key = "<leader><leader>m"; action =  "<cmd>Pick marks<CR>";            options = { desc = "Pick marks"; silent = true; };}
+    { mode = "n"; key = "<leader><leader><leader>"; action =  "<cmd>Pick grep_live<CR>"; options = { desc = "Pick grep"; silent = true; };}
 
     # fold
     { mode = "n"; key = "<leader>zf"; action =  "V%zf"; options.desc = "Fold Code"; }
