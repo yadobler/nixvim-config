@@ -74,7 +74,7 @@
     guifont = "JetBrainsMono Nerd Font:h13";
     encoding = "utf-8";
     showmode = false;
-    laststatus = 2;
+    laststatus = 3;
     background = "dark";
     backspace = "indent,eol,start";
     linespace = 0;
