@@ -6,7 +6,7 @@ in
   plugins = {
     nix.enable = true;
     nix-develop.enable = true;
-    lsp.nil_ls.enable = true;
+    lsp.servers.nil_ls.enable = true;
   };
 
   extraConfigVim = ''
