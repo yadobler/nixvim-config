@@ -14,5 +14,6 @@
         ./shell.nix
         ./typescript.nix
         ./yaml.nix
+        ./hypr.nix
   ];
 }

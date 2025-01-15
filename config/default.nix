@@ -1,8 +1,8 @@
 {
   imports = [
     ./plugins
+    ./lang
     ./autocmd.nix
-
   ];
   extraConfigLua = ''
       -- locale
