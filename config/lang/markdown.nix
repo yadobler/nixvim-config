@@ -22,7 +22,7 @@ in
       owner = "chikamichi";
       repo = "mediawiki.vim";
       rev = "26e5737";
-      hash = "sha256-z835i8QkQFe185sgSLtUaaTsMs2Px9x6KTObTRAOFz0=";
+      hash = "sha256-Tgza7QAzNu0D5cuDyH/jR3rvTuoV2DRA2MBCKjiPUdE=";
     };
   })
   ];

@@ -14,7 +14,7 @@
       spec = [
         { group = "+code";          __unkeyed-1 = "<leader>c"; mode = [ "n" "v" ]; }
         { group = "+code-specific"; __unkeyed-1 = "<leader>cc"; mode = [ "n" "v" ]; }
-        { group = "+markdown"; __unkeyed-1 = "<leader>ccm"; mode = [ "n" "v" ]; }
+        { group = "+markdown";      __unkeyed-1 = "<leader>ccm"; mode = [ "n" "v" ]; }
         
         { group = "+debug";         __unkeyed-1 = "<leader>d"; mode = [ "n" "v" ]; }
         { group = "+git";           __unkeyed-1 = "<leader>g"; mode = [ "n" "v" ]; }

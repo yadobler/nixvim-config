@@ -14,6 +14,7 @@
       };
       use_blame_commit_file_urls = false;
       virtual_text_column = 80;
+      current_line_blame = true;
     };
   };
   keymaps = lib.mkIf config.plugins.gitblame.enable [

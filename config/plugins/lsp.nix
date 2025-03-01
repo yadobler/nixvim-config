@@ -35,6 +35,7 @@
 
     lspsaga = {
       enable = true;
+      hover.openCmd = "!xdg-open";
       codeAction.keys = {
         exec = "<CR>";
         quit = [
@@ -46,6 +47,21 @@
         enable = false;
         sign = false;
         virtualText = true;
+      };
+      definition = {
+        keys = {
+          edit = "<CR>";
+          split = "s";
+          vsplit = "v";
+          close = [
+            "q"
+            "<Esc>"
+          ];
+          quit = [
+            "q"
+            "<Esc>"
+          ];
+        };
       };
       rename = {
         autoSave = false;

@@ -1,10 +1,15 @@
 { pkgs, ... }:
 {
   colorschemes = {
-    oxocarbon.enable = false;
+    oxocarbon.enable = true;
     gruvbox.enable = false;
     onedark.enable = false;
-    cyberdream.enable = true;
+    cyberdream.enable = false;
+    base16 = {
+      enable = false;
+      colorscheme = "tokyo-night-dark";
+    };
   };
   # plugins.transparent.enable = true;
+
 }
