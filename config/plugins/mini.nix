@@ -69,7 +69,6 @@
       };
 
       fuzzy = {};
-
       git = {};
       
       hipatterns = {

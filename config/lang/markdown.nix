@@ -15,7 +15,17 @@ in
       rev = "ae83959";
       hash = "sha256-z835i8QkQFe185sgSLtUaaTsMs2Px9x6KTObTRAOFz0=";
     };
-  })];
+  })
+(pkgs.vimUtils.buildVimPlugin {
+    name = "mediawiki.vim";
+    src = pkgs.fetchFromGitHub {
+      owner = "chikamichi";
+      repo = "mediawiki.vim";
+      rev = "26e5737";
+      hash = "sha256-z835i8QkQFe185sgSLtUaaTsMs2Px9x6KTObTRAOFz0=";
+    };
+  })
+  ];
 
   extraConfigLua = ''
     require("mdx").setup {}
