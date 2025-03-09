@@ -1,20 +1,19 @@
-{ ... }:
-let 
-    # Check if the base16 file exists
-    base16FileExists = builtins.pathExists ./nixvim-base16.nix;
+{ colorscheme, lib, ... }:
+let
+  chosenColorscheme = lib.optionalAttrs (colorscheme != null) (
+    {
+      base16 = {
+        enable = true;
+        colorscheme = colorscheme.palette; 
+      };
+      gruvbox.enable = false;
+    }
+  ) // {
+    base16.enable = false;
+    gruvbox.enable = true;
+  };
 in
 {
-  colorschemes = {
-
-    base16 = {
-      enable = base16FileExists;
-      colorscheme = if base16FileExists then import ./nixvim-base16.nix else null;
-    };
-    oxocarbon.enable = !base16FileExists;
-    gruvbox.enable = false;
-    onedark.enable = false;
-    cyberdream.enable = false;
-
-  };
+  colorschemes = chosenColorscheme;
   # plugins.transparent.enable = true;
 }
