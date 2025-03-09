@@ -30,15 +30,16 @@
             };
           };
 
-          nvim = colorscheme: nixvim'.makeNixvimWithModule (nixvimModule // { extraSpecialArgs.colorscheme = colorscheme; });
+          nvim = nixvim'.makeNixvimWithModule (nixvimModule // { extraSpecialArgs.colorscheme = null; });
+          nvim_color = colorscheme: nixvim'.makeNixvimWithModule (nixvimModule // { extraSpecialArgs.colorscheme = colorscheme; });
         in
         {
           checks = {
             default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
           };
           packages = {
-            default = nvim { colorscheme = null; };  
-            withColors = nvim ;
+            default = nvim;  
+            withColors = nvim_color;
           };
         };
     };
