@@ -37,10 +37,8 @@
           checks = {
             default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
           };
-          packages = {
-            default = nvim;  
-            withColors = nvim_color;
-          };
+          packages.default = nvim;  # Required since packages must be derivations
+          formatter.withColors = nvim_color;  # Functions are allowed here
         };
     };
 }
