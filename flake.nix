@@ -39,7 +39,7 @@
           };
           packages = {
             default = nvim;  # Required since packages must be derivations
-            withColors = { inherit nvim_color; } ;  # Functions are allowed here
+            withColors = colorscheme: nvim_color colorscheme ;  
           };
         };
     };
