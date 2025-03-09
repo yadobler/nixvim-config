@@ -1,0 +1,1 @@
+/nix/store/p15j39ddlpjq61rniifmc88qfd52dnm2-nixvim.nix
