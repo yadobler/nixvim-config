@@ -17,31 +17,29 @@
       ];
 
       perSystem =
-        { pkgs, system, colorscheme ? null, ... }:
+        { pkgs, system, colorscheme ? null, ... }:  
         let
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
-          colorscheme = null;
 
           nixvimModule = {
             inherit pkgs;
-            module = import ./config; 
+            module = import ./config;
             extraSpecialArgs = {
-              inherit colorscheme;
+              inherit colorscheme;  
             };
           };
-          nvim = nixvim'.makeNixvimWithModule nixvimModule;
+
+          nvim = colorscheme: nixvim'.makeNixvimWithModule (nixvimModule // { extraSpecialArgs.colorscheme = colorscheme; });
         in
-          {
+        {
           checks = {
-            # Run `nix flake check .` to verify that your config is not broken
             default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
           };
           packages = {
-            # Lets you run `nix run .` to install nixvim
-            default = nvim;
+            default = nvim { colorscheme = null; };  
+            withColors = nvim ;
           };
         };
     };
-
-} 
+}
