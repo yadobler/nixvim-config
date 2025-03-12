@@ -16,29 +16,29 @@
         "aarch64-darwin"
       ];
 
-      perSystem =
-        { pkgs, system, colorscheme ? null, ... }:  
+      perSystem = { pkgs, system, ... }:
         let
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
 
-          nixvimModule = {
+          mkNvim = colorscheme: nixvim'.makeNixvimWithModule {
             inherit pkgs;
             module = import ./config;
             extraSpecialArgs = {
-              inherit colorscheme;  
+              colorscheme = if colorscheme == null then null else colorscheme;
             };
           };
 
-          nvim = colorscheme: nixvim'.makeNixvimWithModule (nixvimModule // { extraSpecialArgs.colorscheme = colorscheme; });
-        in
-        {
-          checks = {
-            default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
+        in {
+          checks.default = nixvimLib.check.mkTestDerivationFromNixvimModule {
+            inherit pkgs;
+            module = import ./config;
+            extraSpecialArgs = { colorscheme = null; };
           };
+
           packages = {
-            default = (nvim null);  
-            withColors = (colorscheme: nvim colorscheme) ;  
+            default = mkNvim null;  # Default without colorscheme
+            withColors = mkNvim;    # Function to create nvim with custom colorscheme
           };
         };
     };
