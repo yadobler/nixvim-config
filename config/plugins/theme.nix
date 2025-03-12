@@ -1,10 +1,10 @@
-{ colorscheme, lib, ... }:
+{ colorScheme, lib, ... }:
 let
-  chosenColorscheme = lib.optionalAttrs (colorscheme != null) (
+  chosencolorScheme = lib.optionalAttrs (colorScheme != null) (
     {
       base16 = {
         enable = true;
-        colorscheme = colorscheme.palette; 
+        colorScheme = colorScheme.palette; 
       };
       gruvbox.enable = false;
     }
@@ -14,6 +14,6 @@ let
   };
 in
 {
-  colorschemes = chosenColorscheme;
+  colorschemes = chosencolorScheme;
   # plugins.transparent.enable = true;
 }
