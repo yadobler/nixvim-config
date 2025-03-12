@@ -19,6 +19,9 @@
       };
     in
       {
-        packages.${system}.default = pkgs.callPackage nvim { };
+      packages.${system} = {
+        default = pkgs.callPackage nvim { };
+        withColor = colorScheme: pkgs.callPackage nvim { inherit colorScheme; };
+      };
       };
 }
