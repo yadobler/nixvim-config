@@ -12,16 +12,16 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
       nixvim' = nixvim.legacyPackages.${system};
-      nvim = {colorScheme ? null}: nixvim'.makeNixvimWithModule {
+
+      mkNvim = colorScheme: nixvim'.makeNixvimWithModule {
         inherit pkgs;
         module = import ./config;
         extraSpecialArgs = { inherit colorScheme; };
       };
-    in
-      {
+    in {
       packages.${system} = {
-        default = pkgs.callPackage nvim { };
-        withColor = colorScheme: pkgs.callPackage nvim { inherit colorScheme; };
+        default = mkNvim null;
+        withColor = mkNvim;
       };
-      };
+    };
 }
