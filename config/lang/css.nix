@@ -33,6 +33,7 @@
           "mdx"
           "svelte"
           "astro"
+          "vue"
         ];
         cmd = [
           (lib.getExe pkgs.tailwindcss-language-server)
