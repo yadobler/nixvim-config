@@ -24,7 +24,7 @@
           local python_path = handle:read("*l")
           handle:close()
           if python_path and python_path ~= "" then
-            return python_path
+            return vim.fn.expand(python_path)
           end
         end
         -- Fallback to Neovim's default if `which python` fails
