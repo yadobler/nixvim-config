@@ -29,20 +29,18 @@
         codeRunner = {
           enabled = true;
           default_method = "molten";
-          ft_runners = ["markdown" "quarto"];
+          ft_runners = {
+              quarto = "markdown";
+          };
         };
       };
     };
     jupytext = {
       enable = true;
       settings = {
-        custom_language_formatting = {
-          python = {
-            extension = "md";
-            force_ft = "markdown";
-            style = "markdown";
-          };
-        };
+        extension = "md";
+        style = "markdown";
+        force_ft = "markdown";
       };
     };
 
