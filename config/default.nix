@@ -17,6 +17,22 @@
       vim.g.neovide_cursor_vfx_mode = ""
       vim.g.neovide_cursor_animation_length = 0.1
       vim.g.neovide_cursor_trail_size = 0.8
+
+      local function get_python_host_prog()
+        local handle = io.popen("which python")
+        if handle then
+          local python_path = handle:read("*l")
+          handle:close()
+          if python_path and python_path ~= "" then
+            return python_path
+          end
+        end
+        -- Fallback to Neovim's default if `which python` fails
+        return vim.g.python3_host_prog
+      end
+
+      vim.g.python3_host_prog = get_python_host_prog()
+      vim.g.python_host_prog = get_python_host_prog()
       '';
 
   globals = {
