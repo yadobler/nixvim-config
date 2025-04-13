@@ -22,14 +22,14 @@ in
       owner = "chikamichi";
       repo = "mediawiki.vim";
       rev = "26e5737";
-      hash = "sha256-Tgza7QAzNu0D5cuDyH/jR3rvTuoV2DRA2MBCKjiPUdE=";
-    };
-  })
+        hash = "sha256-Tgza7QAzNu0D5cuDyH/jR3rvTuoV2DRA2MBCKjiPUdE=";
+      };
+    })
   ];
 
   extraConfigLua = ''
     require("mdx").setup {}
-    '';
+  '';
 
   plugins = {
     clipboard-image = {
@@ -37,13 +37,13 @@ in
       clipboardPackage = pkgs.wl-clipboard;
     };
 
-      # image = {
-      #   enable = helpers.enableExceptInTests;
-      #   integrations.markdown = {
-      #     clearInInsertMode = true;
-      #     onlyRenderImageAtCursor = true;
-      #   };
-      # };
+    image = {
+      enable = helpers.enableExceptInTests;
+      integrations.markdown = {
+        clearInInsertMode = true;
+        # onlyRenderImageAtCursor = true;
+      };
+    };
 
     markdown-preview = {
       enable = true;

@@ -1,6 +1,7 @@
 {
   imports = [
-    #./java.nix
+    # ./java.nix
+    # ./notebook.nix
     ./astro.nix
     ./cpp.nix
     ./css.nix
@@ -11,7 +12,6 @@
     ./lua.nix
     ./markdown.nix
     ./nix.nix
-    ./notebook.nix
     ./python.nix
     ./shell.nix
     ./typescript.nix
