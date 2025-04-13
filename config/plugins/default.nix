@@ -7,5 +7,6 @@
     ./utils.nix
     ./telescope.nix
     ./git.nix
+    ./snacks.nix
   ];
 }
