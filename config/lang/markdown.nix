@@ -41,7 +41,8 @@ in
       enable = helpers.enableExceptInTests;
       integrations.markdown = {
         clearInInsertMode = true;
-        # onlyRenderImageAtCursor = true;
+        onlyRenderImageAtCursor = true;
+        filetypes = ["markdown" "vimwiki" "quarto"];
       };
     };
 
