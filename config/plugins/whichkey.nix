@@ -30,6 +30,13 @@
     { mode = "n"; key = "j"; action = "gj"; }
     { mode = "n"; key = "k"; action = "gk"; }
 
+    # Navigate windows
+    { mode = "n"; key = "<C-h>"; action = "<C-w>h"; options.desc = "Move to left window";}
+    { mode = "n"; key = "<C-j>"; action = "<C-w>j"; options.desc = "Move to bottom window";}
+    { mode = "n"; key = "<C-k>"; action = "<C-w>k"; options.desc = "Move to top window";}
+    { mode = "n"; key = "<C-l>"; action = "<C-w>l"; options.desc = "Move to right window";}
+
+
     # Set highlight on search, but clear on pressing <Esc> in normal mode
     { mode = "n"; key = "<Esc>"; action = "<cmd>nohlsearch<CR>"; }
     { mode = ["n" "v"]; key = "i"; action = "<cmd>nohlsearch<CR>i"; }
@@ -40,6 +47,8 @@
     # Allow search terms to stay in the middle
     { mode = "n"; key = "N"; action = "Nzzzv"; }
     { mode = "n"; key = "n"; action = "nzzzv"; }
+    { mode = "n"; key = "<C-d>"; action = "<C-d>zz"; }
+    { mode = "n"; key = "<C-u>"; action = "<C-u>zz"; }
 
     # new tab
     { mode = "n"; key = "gn"; action = "<cmd>tabnew<CR>"; options.desc = "Opens a new tab";}
@@ -77,7 +86,6 @@
     # utilities
     { mode = "n"; key = "<leader>ucp"; action =  "<cmd>CccPick<CR>"; options.desc = "Color Picker"; }
     { mode = "n"; key = "<leader>ucc"; action =  "<cmd>CccConvert<CR>"; options.desc = "Convert Color"; }
-
 
     # lsp
     { mode = "n"; key = "<leader>cD"; action = "<cmd>Lspsaga hover_doc<CR>"; options = { desc = "Hover"; silent = true; }; } 

@@ -13,6 +13,7 @@
       pattern = ["*"];
       event = ["InsertEnter"];
     }
+
     {
       desc = "set indenting for markdown";
       command = "setlocal wrap | setlocal linebreak | setlocal showbreak=\\ \\ ";

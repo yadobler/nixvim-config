@@ -1,12 +1,9 @@
 {
   imports = [
     ./theme.nix
-    ./mini.nix
     ./whichkey.nix
     ./lsp.nix
+    ./mini.nix
     ./utils.nix
-    ./telescope.nix
-    ./git.nix
-    ./snacks.nix
   ];
 }
