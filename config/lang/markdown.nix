@@ -33,8 +33,15 @@ in
   '';
 
   plugins = {
+    markdown-preview = {
+      enable = true;
+    };
     render-markdown = {
       enable = true;
+      settings = {
+        enabled = true;
+        file_types = ["markdown" "mdx"];
+      };
     }; 
 
     clipboard-image = {
@@ -49,10 +56,6 @@ in
         onlyRenderImageAtCursor = true;
         filetypes = ["markdown" "vimwiki" "quarto"];
       };
-    };
-
-    markdown-preview = {
-      enable = true;
     };
 
     conform-nvim.settings = {

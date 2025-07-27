@@ -30,8 +30,8 @@
           "typescript.tsx"
           "vue"
           "html"
-          "markdown"
-          "mdx"
+          # "markdown"
+          # "mdx"
           "json"
           "jsonc"
           "yaml"
@@ -56,7 +56,7 @@
           "typescript"
           "typescriptreact"
           "svelte"
-          "mdx"
+          # "mdx"
         ];
 
         settings = {
