@@ -11,8 +11,6 @@
       vim.o.shortmess = vim.o.shortmess .. "I" -- don't show the default intro message
       vim.o.whichwrap = vim.o.whichwrap .. "<,>,[,],h,l"
 
-      vim.wo.vim.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- Use treesitter for folding
-
       vim.g.neovide_transparency = 1.0
       vim.g.neovide_scale_factor = 1.0
       vim.g.neovide_floating_shadow = false
@@ -38,8 +36,6 @@
       '';
 
   globals = {
-    # loaded_netrw = 1;
-    # loaded_newrwPlugin = 1;
     autochdir = false;
     have_nerd_font = true;
 
@@ -70,7 +66,7 @@
     scrolloff = 5;
     showmatch = true;
     errorbells = false;
-    colorcolumn = "100";
+    # colorcolumn = 100;
 
     # Mouse
     mouse = "nv";
@@ -92,6 +88,7 @@
     #foldenable = true;
     #foldlevelstart = 99;
     foldmethod = "expr";
+    foldexpr = "v:lua.vim.treesitter.foldexpr()"; # Use treesitter for folding
     foldlevel = 99;
     #copyindent = true;
 
@@ -107,7 +104,6 @@
 
     # Preview substitutions live, as you type!
     inccommand = "split";
-    
     clipboard = "unnamedplus";
 
   };
