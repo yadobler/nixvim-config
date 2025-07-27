@@ -7,21 +7,22 @@ in
     marksman
   ];
 
-  extraPlugins = [(pkgs.vimUtils.buildVimPlugin {
-    name = "mdx.nvim";
-    src = pkgs.fetchFromGitHub {
-      owner = "davidmh";
-      repo = "mdx.nvim";
-      rev = "ae83959";
-      hash = "sha256-z835i8QkQFe185sgSLtUaaTsMs2Px9x6KTObTRAOFz0=";
-    };
-  })
-(pkgs.vimUtils.buildVimPlugin {
-    name = "mediawiki.vim";
-    src = pkgs.fetchFromGitHub {
-      owner = "chikamichi";
-      repo = "mediawiki.vim";
-      rev = "26e5737";
+  extraPlugins = [
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "mdx.nvim";
+      src = pkgs.fetchFromGitHub {
+        owner = "davidmh";
+        repo = "mdx.nvim";
+        rev = "ae83959";
+        hash = "sha256-z835i8QkQFe185sgSLtUaaTsMs2Px9x6KTObTRAOFz0=";
+      };
+    })
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "mediawiki.vim";
+      src = pkgs.fetchFromGitHub {
+        owner = "chikamichi";
+        repo = "mediawiki.vim";
+        rev = "26e5737";
         hash = "sha256-Tgza7QAzNu0D5cuDyH/jR3rvTuoV2DRA2MBCKjiPUdE=";
       };
     })
@@ -32,6 +33,10 @@ in
   '';
 
   plugins = {
+    render-markdown = {
+      enable = true;
+    }; 
+
     clipboard-image = {
       enable = true;
       clipboardPackage = pkgs.wl-clipboard;
