@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-
   plugins = {
     conform-nvim.settings = {
       formatters_by_ft = {
@@ -13,6 +12,25 @@
 
       formatters.eslint_d = {
         command = "${pkgs.eslint_d}/bin/eslint_d";
+      };
+    };
+    
+    ts-autotag.enable = true;
+
+    typescript-tools = {
+      enable = true;
+      settings = {
+        tsserver_plugins = [ 
+          "typescript-svelte-plugin" 
+        ];
+        # filetypes = [
+        #   "javascript"
+        #   "javascriptreact"
+        #   "typescript"
+        #   "typescriptreact"
+        #   "svelte"
+        #   # "mdx"
+        # ];
       };
     };
 
@@ -45,48 +63,6 @@
           "postcss"
         ];
       };
-
-      ts_ls = {
-        enable = true;
-        filetypes = [
-          "javascript"
-          "javascriptreact"
-          "typescript"
-          "typescriptreact"
-          # "svelte"
-          # "mdx"
-        ];
-
-        settings = {
-          complete_function_calls = true;
-          vtsls = {
-            autoUseWorkspaceTsdk = true;
-            experimental = {
-              completion = {
-                enableServerSideFuzzyMatch = true;
-              };
-            };
-          };
-
-          typescript = {
-            updateImportsOnFileMove.enabled = "always";
-            suggest = {
-              completeFunctionCalls = true;
-            };
-
-            inlayHints = {
-              enumMemberValues.enabled = true;
-              functionLikeReturnTypes.enabled = true;
-              parameterNames.enabled = "literals";
-              parameterTypes.enabled = true;
-              propertyDeclarationTypes.enabled = true;
-              variableType.enabled = false;
-            };
-          };
-        };
-      };
     };
-
-    ts-autotag.enable = true;
   };
 }

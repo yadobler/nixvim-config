@@ -14,6 +14,7 @@
     ./nix.nix
     ./python.nix
     ./shell.nix
+    ./svelte.nix
     ./typescript.nix
     ./vue.nix
     ./yaml.nix
