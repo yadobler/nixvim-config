@@ -1,4 +1,4 @@
-i{ pkgs, ... }:
+{ pkgs, ... }:
 {
   plugins = {
     conform-nvim.settings = {
