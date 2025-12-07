@@ -17,8 +17,6 @@
     };
 
     lsp.servers = {
-      svelte.enable = true;
-
       eslint = {
         enable = true;
         filetypes = [
@@ -55,7 +53,7 @@
           "javascriptreact"
           "typescript"
           "typescriptreact"
-          "svelte"
+          # "svelte"
           # "mdx"
         ];
 
