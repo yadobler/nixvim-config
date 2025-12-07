@@ -35,48 +35,51 @@
 
     lspsaga = {
       enable = true;
-      hover.openCmd = "!xdg-open";
-      codeAction.keys = {
-        exec = "<CR>";
-        quit = [
-          "<Esc>"
-          "q"
-        ];
-      };
-      lightbulb = {
-        enable = false;
-        sign = false;
-        virtualText = true;
-      };
-      definition = {
-        keys = {
-          edit = "<CR>";
-          split = "s";
-          vsplit = "v";
-          close = [
-            "q"
-            "<Esc>"
-          ];
-          quit = [
-            "q"
-            "<Esc>"
-          ];
-        };
-      };
-      rename = {
-        autoSave = false;
-        keys = {
+      settings = {
+        hover.openCmd = "!xdg-open";
+        codeAction.keys = {
           exec = "<CR>";
           quit = [
-            "<C-k>"
             "<Esc>"
+            "q"
           ];
-          select = "x";
         };
-      };
-      scrollPreview = {
-        scrollDown = "<C-p>";
-        scrollUp = "<C-n>";
+        lightbulb = {
+          enable = false;
+          sign = false;
+          virtualText = true;
+        };
+        definition = {
+          keys = {
+            edit = "<CR>";
+            split = "s";
+            vsplit = "v";
+            close = [
+              "q"
+              "<Esc>"
+            ];
+            quit = [
+              "q"
+              "<Esc>"
+            ];
+          };
+        };
+        rename = {
+          autoSave = false;
+          keys = {
+            exec = "<CR>";
+            quit = [
+              "<C-k>"
+              "<Esc>"
+            ];
+            select = "x";
+          };
+        };
+        scrollPreview = {
+          scrollDown = "<C-p>";
+          scrollUp = "<C-n>";
+        };
+
       };
     };
     

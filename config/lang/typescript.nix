@@ -8,7 +8,7 @@
         javascriptreact = [ "eslint_d" ];
         typescript = [ "eslint_d" ];
         typescriptreact = [ "eslint_d" ];
-        # svelte = [ "eslint_d" ];
+        svelte = [ "eslint_d" ];
       };
 
       formatters.eslint_d = {
