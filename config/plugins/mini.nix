@@ -92,7 +92,7 @@
     #       group = rgba_color,
     #       extmark_opts = extmark_opts_inline,
     #     },''
-    #     };
+        };
       };
 
       icons.style = "glyph";
