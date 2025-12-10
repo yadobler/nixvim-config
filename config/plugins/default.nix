@@ -5,5 +5,6 @@
     ./lsp.nix
     ./mini.nix
     ./utils.nix
+    ./colorizer.nix
   ];
 }

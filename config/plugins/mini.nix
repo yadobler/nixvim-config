@@ -74,10 +74,25 @@
           hack  = { pattern = "%f[%w]()HACK()%f[%W]";  group = "MiniHipatternsHack";  };
           todo  = { pattern = "%f[%w]()TODO()%f[%W]";  group = "MiniHipatternsTodo";  };
           note  = { pattern = "%f[%w]()NOTE()%f[%W]";  group = "MiniHipatternsNote";  };
-          hex_color.__raw = ''
-            require('mini.hipatterns').gen_highlighter.hex_color()
-            '';
-        };
+
+          # hex colors will not use mini hipatterns
+
+    #       hex_color.__raw = ''
+    #         require('mini.hipatterns').gen_highlighter.hex_color()
+    #         '';
+    #
+    # # https://github.com/nvim-mini/mini.nvim/discussions/1024
+    # # thank you tigion
+    #       hex_color_short.__raw = ''{ pattern = '#%x%x%x%f[%X]', group = hex_color_short, extmark_opts = extmark_opts_inline },
+    #     -- `rgb(255, 255, 255)`''
+    #     rgb_color.__raw = ''{ pattern = 'rgb%(%d+, ?%d+, ?%d+%)', group = rgb_color, extmark_opts = extmark_opts_inline },
+    #     -- `rgba(255, 255, 255, 0.5)`''
+    #     rgba_color.__raw = ''{
+    #       pattern = 'rgba%(%d+, ?%d+, ?%d+, ?%d*%.?%d*%)',
+    #       group = rgba_color,
+    #       extmark_opts = extmark_opts_inline,
+    #     },''
+    #     };
       };
 
       icons.style = "glyph";
