@@ -104,7 +104,11 @@
 
     # Preview substitutions live, as you type!
     inccommand = "split";
-    clipboard = "unnamedplus";
+
+    # clipboard
+    # clipboard = "unnamedplus"; # syncs system clipboard with vim clipboard 
+    # I prefer to just use "+ explicitly else the system clipboard will be polluted with 
+    # every single edit command like c and d.
 
   };
 }
